@@ -26,7 +26,7 @@ def main():
     gemini = Agent("Gemini", "Research")
     grok = Agent("Grok", "Trends")
 
-        chatgpt.introduce()
+    chatgpt.introduce()
     gemini.introduce()
     grok.introduce()
 
