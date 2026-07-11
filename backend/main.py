@@ -4,7 +4,7 @@ from logger import log
 from moderator import Moderator
 from memory import Memory
 from agents import Agent
-
+from conference import Conference
 
 def main():
     print("=" * 50)
@@ -26,11 +26,16 @@ def main():
     gemini = Agent("Gemini", "Research")
     grok = Agent("Grok", "Trends")
 
-    chatgpt.introduce()
+        chatgpt.introduce()
     gemini.introduce()
     grok.introduce()
 
     log("Conference system ready.")
+
+    topic = input("Chairman, enter today's topic: ")
+
+    conference = Conference(topic)
+    conference.start()
 
     print("=" * 50)
     print("AI Conference Room is ONLINE")
