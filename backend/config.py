@@ -1,6 +1,11 @@
 """
 AI Conference Room Core
-Module: Config
-
-Status: Under Development
+Configuration Module
 """
+
+APP_NAME = "AI Conference Room Core"
+VERSION = "0.1"
+
+MAX_AGENTS = 9
+
+DEBUG = True
