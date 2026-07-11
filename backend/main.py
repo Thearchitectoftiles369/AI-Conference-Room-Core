@@ -1,20 +1,17 @@
-"""
-AI Conference Room Core
-Version: 0.1
-Author: The Architect of Tiles 369
+from config import APP_NAME, VERSION
+from database import connect
+from logger import log
 
-Main entry point of the system.
-"""
 
 def main():
     print("=" * 50)
-    print(" AI CONFERENCE ROOM CORE ")
+    print(APP_NAME)
+    print(f"Version: {VERSION}")
     print("=" * 50)
-    print("System Status : ONLINE")
-    print("Moderator     : Ready")
-    print("Agents        : Waiting")
-    print("Memory        : Ready")
-    print("=" * 50)
+
+    log("Starting system...")
+    connect()
+    log("System ready.")
 
 
 if __name__ == "__main__":
