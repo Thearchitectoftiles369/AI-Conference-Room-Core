@@ -1,6 +1,11 @@
-"""
-AI Conference Room Core
-Module: agents
+from logger import log
 
-Status: Under Development
-"""
+
+class Agent:
+
+    def __init__(self, name, role):
+        self.name = name
+        self.role = role
+
+    def introduce(self):
+        log(f"{self.name} joined the conference as {self.role}.")
