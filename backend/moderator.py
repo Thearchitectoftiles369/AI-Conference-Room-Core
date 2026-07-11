@@ -1,6 +1,10 @@
-"""
-AI Conference Room Core
-Module: Moderator
+from logger import log
 
-Status: Under Development
-"""
+
+class Moderator:
+
+    def __init__(self):
+        self.name = "Conference Moderator"
+
+    def start(self):
+        log(f"{self.name} is online.")
