@@ -3,9 +3,10 @@ from logger import log
 
 class Conference:
 
-    def __init__(self, topic):
+    def __init__(self, topic, agents):
         self.topic = topic
         self.phase = "Understanding the Problem"
+        self.agents = agents
 
     def start(self):
         print()
@@ -26,8 +27,14 @@ class Conference:
         print()
         print(f"Current Phase: {self.phase}")
 
+        for agent in self.agents:
+            print()
+            print("Moderator:")
+            print(f"{agent.name}, you have the floor.")
+            agent.speak()
+
         print()
         print("Moderator:")
-        print("ChatGPT, you have the floor.")
+        print("Phase 1 completed.")
 
         print("=" * 50)
